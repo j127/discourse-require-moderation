@@ -1,4 +1,4 @@
-TODO_plugin_name:
-  plugin_name_enabled:
+discourse_require_moderation:
+  discourse_require_moderation_enabled:
     default: false
     client: true

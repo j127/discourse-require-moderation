@@ -1,4 +1,4 @@
-# **Plugin Name** Plugin
+# **Discourse Require Moderation** Plugin
 
 **Plugin Summary**
 

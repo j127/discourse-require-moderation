@@ -3,7 +3,7 @@ en:
     admin:
       site_settings:
         categories:
-          TODO_plugin_name: "Plugin Name"
+          discourse_require_moderation: "Discourse Require Moderation"
   js:
-    discourse_plugin_name:
+    discourse_require_moderation:
       placeholder: placeholder
