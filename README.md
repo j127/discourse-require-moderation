@@ -1,5 +1,5 @@
-# **Discourse Require Moderation** Plugin
+# discourse-require-moderation
 
-**Plugin Summary**
+This plugin allows you to require moderation for specific users.
 
-For more information, please see: **url to meta topic**
+Based on ideas from [discourse-forcemoderation](https://github.com/LeoDavidson/discourse-forcemoderation) but rewritten from scratch in 2026.

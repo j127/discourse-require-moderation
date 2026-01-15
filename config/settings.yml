@@ -2,3 +2,7 @@ discourse_require_moderation:
   discourse_require_moderation_enabled:
     default: false
     client: true
+  discourse_require_moderation_users:
+    default: ""
+    client: false
+    type: list

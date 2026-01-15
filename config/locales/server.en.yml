@@ -1,1 +1,4 @@
 en:
+  site_settings:
+    discourse_require_moderation_enabled: "Require moderation"
+    discourse_require_moderation_users: "Usernames that will have all their posts require moderation"
