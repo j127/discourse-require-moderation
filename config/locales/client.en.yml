@@ -1,0 +1,9 @@
+en:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          discourse_require_moderation: "Discourse Require Moderation"
+  js:
+    discourse_require_moderation:
+      placeholder: "placeholder"
