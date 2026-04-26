@@ -6,7 +6,11 @@ RSpec.describe NewPostManager do
   fab!(:topic)
 
   def manager_for(user)
-    NewPostManager.new(user, raw: "Hello world, this is a long enough post body.", topic_id: topic.id)
+    NewPostManager.new(
+      user,
+      raw: "Hello world, this is a long enough post body.",
+      topic_id: topic.id,
+    )
   end
 
   describe ".post_needs_approval?" do
@@ -62,11 +66,11 @@ RSpec.describe NewPostManager do
 
       it "preserves core approval reasons for unlisted users" do
         SiteSetting.discourse_require_moderation_users = "someone_else"
-        SiteSetting.approve_unless_trust_level = TrustLevel[2]
-        # regular_user is TL1, so core requires approval; our plugin must not clobber that.
-        expect(NewPostManager.post_needs_approval?(manager_for(regular_user))).to eq(:trust_level)
+        SiteSetting.approve_post_count = 1
+        # regular_user has 0 approved posts, so core requires approval (:post_count).
+        # Our plugin must not clobber that with :skip.
+        expect(NewPostManager.post_needs_approval?(manager_for(regular_user))).to eq(:post_count)
       end
-
     end
   end
 end
