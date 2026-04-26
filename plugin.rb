@@ -16,11 +16,12 @@ end
 require_relative "lib/discourse_require_moderation/engine"
 
 after_initialize do
-
   module ::DiscourseRequireModeration
     def post_needs_approval?(manager)
       super_result = super
-      return super_result if !SiteSetting.discourse_require_moderation_enabled || super_result != :skip
+      if !SiteSetting.discourse_require_moderation_enabled || super_result != :skip
+        return super_result
+      end
 
       users = SiteSetting.discourse_require_moderation_users
       return :skip if users.blank?
