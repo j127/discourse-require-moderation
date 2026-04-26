@@ -5,7 +5,7 @@
 # version: 0.0.1
 # authors: @j127
 # url: https://github.com/j127/discourse-require-moderation
-# required_version: 2.7.0
+# required_version: 3.0.0
 
 enabled_site_setting :discourse_require_moderation_enabled
 
